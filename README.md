@@ -1,1 +1,1 @@
-# New Condo Apartment Price Trends in Canada after COVID-19
+# Impact of COVID-19 on New Condo Prices in Canada
