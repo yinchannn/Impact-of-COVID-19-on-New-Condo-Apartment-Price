@@ -2,9 +2,8 @@
 ## Introduction
 According to [Statistics Canada](https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2020050-eng.pdf), the price of condo apartments increased at a faster pace than the price of homes prior to COVID-19. It is predicted that people will opt to live in the suburbs instead of cities.
 <br/>
-To investigate further the impact of COVID-19 on Canadian condo apartment market, the project aims to find out the patterns of the price trends in different regions.
 <br/>
-Therefore, the project analyzes the Quarterly New Condominium Apartment Price Indexes, by cenusus metropolitan area (Statistics Canada, 2022) using linear regressions in R and visualizes the results using Tableau.
+To investigate further the impact of COVID-19 on Canadian condo apartment market, the project aims to find out the patterns of the price trends in different regions. Therefore, the project analyzes the Quarterly New Condominium Apartment Price Indexes, by cenusus metropolitan area (Statistics Canada, 2022) using linear regressions in R and visualizes the results using Tableau.
 <br/>
 <br/>
 
@@ -17,7 +16,7 @@ Before using R, the data is first cleaned using spreadsheet by performing the fo
 Uncleaned
 <img src="Price_Indexes_Uncleaned.png" width="1000">
 Cleaned
-<img src="Price_Indexes_Uncleaned.png" width="1000">
+<img src="Price_Indexes_Cleaned.png" width="1000">
 <br/>
 After that, install the necessary packages to R.
 
@@ -92,22 +91,23 @@ for (i in 1:length(locations)){
       geom_vline(xintercept=outbreak_day,linetype="dotted",color="red",size=1.5)+
       annotate(geom="text", x=outbreak_day-200, y=145, label="Outbreak of COVID-19", color="red")
     )
-  ggsave(filename=paste(locations[i],".png"), width=10, height=5)
+  ggsave(filename=paste(locations[i],".png",sep=""), width=10, height=5)
 }
 ```
-<img src="The Composite of the Nine Areas.png" width="500">
-<img src="Halifax, NS.png" width="500">
-<img src="Montreal, QC.png" width="500">
-<img src="Quebec, QC.png" width="500">
-<img src="Ottawa-Gatineau, ON,QC.png" width="500">
-<img src="Toronto, ON.png" width="500">
-<img src="Calgary, AB.png" width="500">
-<img src="Edmonton, AB.png" width="500">
-<img src="Vancouver, BC.png" width="500">
-<img src="Victoria, BC.png" width="500">
+<img src="The Composite of the Nine Areas.png" width="1000">
+<img src="Halifax, NS.png" width="1000">
+<img src="Montreal, QC.png" width="1000">
+<img src="Quebec, QC.png" width="1000">
+<img src="Ottawa-Gatineau, ON,QC.png" width="1000">
+<img src="Toronto, ON.png" width="1000">
+<img src="Calgary, AB.png" width="1000">
+<img src="Edmonton, AB.png" width="1000">
+<img src="Vancouver, BC.png" width="1000">
+<img src="Victoria, BC.png" width="1000">
 <br/>
 
 From the above plots, we can see some general insights about the price such as increasing trends in Toronto and Vancouver, stable trend in Quebec and flattening trend in Victoria. However, to get quantitative understandings, linear regressions need to be performed.
+<br/>
 <br/>
 For each area, two linear regressions, before and after the outbreak, are used to model the price trends. The slope coefficient and R squared are recorded for the comparison on the strengths and stabilities of the trends.
 
@@ -146,7 +146,7 @@ To relate the results with geographical factors, an interactive dashboard is dev
 
 See the results [here](https://public.tableau.com/views/ImpactofCOVID-19onNewCondoPricesinCanada/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link).
 <br/>
-<img src="Results_in_Tableau.png" width="800">
+<img src="Results_on_Tableau.png" width="800">
 <br/>
 
 ## References
