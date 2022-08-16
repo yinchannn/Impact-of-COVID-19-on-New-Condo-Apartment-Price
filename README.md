@@ -144,7 +144,7 @@ To make the results more readible, the csv file is convert to a spreadsheet and 
 <br/>
 To relate the results with geographical factors, an interactive dashboard is developed and the findings are presented on maps using Tableau.
 
-See the results [here](https://public.tableau.com/views/ImpactofCOVID-19onNewCondoPricesinCanada/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link).
+View the dashboard [here](https://public.tableau.com/views/ImpactofCOVID-19onNewCondoPricesinCanada/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link).
 <br/>
 <img src="Results_on_Tableau.png" width="800">
 <br/>
